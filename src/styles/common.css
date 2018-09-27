@@ -1,0 +1,1101 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+#deepEyeWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.header_right {
+  height: 60px;
+  width: 360px;
+}
+
+.header_userBox {
+  opacity: 0.6;
+  cursor: pointer;
+  margin-right: 3%;
+}
+
+.header_userBox:hover {
+  opacity: 1;
+}
+
+.userBox_menu {
+  width: 250px;
+  margin-top: 15px;
+  left: -60px;
+  position: absolute;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.userBox_menu_infos {
+  padding: 20px 0;
+  color: #f1f1f1;
+  background: linear-gradient(to bottom right, #1188ee, #60b2fd);
+  font-size: 12px;
+  text-indent: 5px;
+}
+.userBox-menu-tri {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: -7px;
+  left: calc(50% - 10px);
+  left: 75px;
+  background: #2090f1;
+  -ms-transform: rotate(60deg) skew(30deg);
+  transform: rotate(50deg) skew(10deg);
+  -webkit-transform: rotate(50deg) skew(10deg);
+  z-index: -1;
+}
+.userBox-menu-mainbox {
+  width: 100%;
+  height: calc(100% - 72px);
+  position: relative;
+  overflow: auto;
+  border-radius: 3px;
+}
+.userImg {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  margin-right: 5px;
+}
+.userImg img {
+  border-radius: 50%;
+  width: 100%;
+  min-height: 60px;
+}
+.userDetail {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
+.userName {
+  font-size: 18px;
+  display: block;
+  padding: 5px 0 15px 0;
+}
+.userStation,
+.userNums {
+  display: block;
+  white-space: pre-wrap;
+}
+
+.userBox_menu_item {
+  font-size: 14px;
+  color: #333;
+  padding: 10px 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.userBox_menu_item:hover {
+  background: #ddf2ff;
+}
+
+.icon_text {
+  display: inline-block;
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.icon24 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.icon_maintenance {
+  background: url('../asset/icon/maintenance.png') center no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.icon_maintenance:hover {
+  opacity: 1;
+}
+.icon_maintenance.forbidden {
+  opacity: 0.4;
+}
+/* .icon_dashboard {
+  background: url('../asset/icon/dashboardlogo.png') center no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.icon_dashboard:hover {
+  opacity: 1;
+} */
+.icon_news {
+  background: url('../asset/icon/news.png') center no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.icon_news:hover {
+  opacity: 1;
+}
+
+.icon_manage {
+  background: url('../asset/icon/setting.png') center no-repeat;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.icon_manage:hover {
+  opacity: 1;
+}
+.icon_manage.forbidden {
+  opacity: 0.4;
+}
+
+.header_avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.deepEye_group {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.deepEye_exmport {
+  padding: 0 0 0 25px;
+  margin: 0 70px 0 0;
+  background: url('../asset/icon/Export.png') left no-repeat;
+  cursor: pointer;
+
+  /* 演示禁用样式 */
+  cursor: default;
+  text-decoration: none;
+  pointer-events: none;
+  color: #9f9f9f !important;
+  border-color: #acacac !important;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 1px 1px #fff;
+}
+
+.deepEye_exmport:hover {
+  color: #1188ee;
+  background: url('../asset/icon/Export_ant.png') left no-repeat;
+}
+
+/* 摄像头组件样式 start */
+
+.deepEye_camera_component {
+  padding: 16px 0px 16px 40px;
+  border-bottom: 1px solid #dbdbdb;
+  cursor: pointer;
+  position: relative;
+}
+
+.deepEye_camera_component:hover {
+  background: #f5f6f7;
+}
+
+.deepEye_camera_component.active {
+  background: #eaf2f8;
+}
+
+.deepEye_camera_component_left {
+  width: 172px;
+  margin-right: 38px;
+}
+
+.deepEye_camera_component_right {
+  width: calc(100% - 210px);
+  height: 150px;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+.deepEye_camera_component_right.hasArrow {
+  position: relative;
+  width: calc(100% - 210px - 40px);
+  /* white-space: nowrap; */
+}
+.deepEye_camera_component_right_row {
+  width: 48px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url('../asset/icon/right_gray.png') center center no-repeat;
+}
+.empty_camera_msg {
+  text-align: center;
+  margin-top: 62px;
+}
+
+.deepEye_camera_item_right {
+  margin-top: 56px;
+  margin-left: 40px;
+}
+
+.deepEye_camera_component_title {
+  /* width: 156px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px; */
+}
+
+.deepEye_camera_component_title_detail {
+  font-size: 16px;
+  padding-right: 10px;
+}
+.deepEye_camera_component_title_name {
+  display: inline-block;
+  max-width: 172px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 21px;
+  vertical-align: middle;
+}
+#searchSystem_content .deepEye_camera_component_title_name {
+  max-width: 145px;
+}
+
+.deepEye_camera_component_view {
+  width: 14px;
+  height: 14px;
+  background: url('../asset/icon/pic.png') center no-repeat;
+  cursor: pointer;
+}
+
+.camera_place_center {
+  margin-top: 10px;
+}
+
+.camera_place_icons {
+  margin-top: 20px;
+}
+#searchSystem_content .camera_place_center {
+  margin-top: 10px;
+  margin-left: 26px;
+}
+#searchSystem_content .camera_place_center.video {
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+#searchSystem_content .camera_place_icons {
+  margin-top: 20px;
+  margin-left: 26px;
+}
+#searchSystem_content .camera_place_icons.video {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+.camera_place_icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background: rgba(16, 135, 237, 0.05);
+  border-radius: 3px;
+  /* border: 1px dashed #dbdbdb; */
+  margin-right: 10px;
+  background-position: center;
+}
+.camera_place_icons_icon_camera {
+  background-image: url('../asset/icon/icon_camera.png');
+}
+.camera_place_icons_icon_toMap {
+  background-image: url('../asset/icon/icon_map.png');
+}
+.camera_place_icons_icon_device {
+  background-image: url('../asset/icon/icon_device.png');
+}
+.camera_place_icons_icon_video {
+  background-image: url('../asset/icon/icon_video.png');
+}
+
+.change-into-mappoi {
+  display: inline-block;
+  width: 32px;
+  height: 28px;
+  background-image: url('../asset/icon/mapicon.png');
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: 9px;
+  cursor: pointer;
+}
+
+.deepEye_camera_component_place {
+  display: inline-block;
+  padding: 4px 14px;
+  color: #999;
+  font-size: 12px;
+  background: url('../asset/icon/icon_label.png') 0px center no-repeat;
+}
+
+.deepEye_camera_component_percent {
+  margin-top: 10px;
+}
+
+.deepEye_camera_component_percent_title {
+  color: #80868e;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.deepEye_camera_component_percent_num {
+  display: inline-block;
+  width: 103px;
+  text-align: right;
+  font-size: 12px;
+  color: #80868e;
+}
+
+.deepEye_camera_component_percent .ant-progress-inner {
+  /* border-radius: initial; */
+  background: #e1e1e1;
+}
+
+/* .deepEye_camera_component_percent .ant-progress-bg {
+  border-radius: initial;
+  background: #999;
+} */
+
+.deepEye_face_item {
+  display: inline-block;
+  width: 120px;
+  height: 150px;
+  vertical-align: top;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  padding: 8px;
+  position: relative;
+}
+
+.deepEye_face_wrap {
+  position: relative;
+}
+
+.deepEye_face_wrap:hover .deepEye_hoverRemove {
+  display: block;
+}
+
+.deepEye_hoverRemove {
+  display: none;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: url('../asset/icon/remove.png') center no-repeat;
+  cursor: pointer;
+}
+
+.deepEye_face_box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.deepEye_face {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  /* background: #e1e1e1; */
+  color: #fff;
+  cursor: pointer;
+}
+
+.deepEye_face_choose {
+  border: 2px solid #1188ee;
+  box-shadow: 0px 0px 4px #1188ee;
+}
+
+.deepEye_face_alarm {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  background: #dd3f3f;
+  transition: bottom 0.5s;
+}
+
+.deepEye_face_videotip {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  background: #1890ff;
+  transition: bottom 0.5s;
+}
+
+.deepEye_face_box:hover .deepEye_face_alarm {
+  bottom: 0px;
+}
+
+.deepEye_face_dateTime {
+  margin: 6px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.deepEye_face_dateTime span {
+  padding: 0 2px;
+}
+
+.deepEye_camera_component_videoTime {
+  margin-top: 10px;
+  color: #80868e;
+}
+
+.deepEye_face_videoTime {
+  width: 100%;
+  height: 20px;
+  line-height: 18px;
+  margin-top: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.deepEye_face_videoTime_text {
+  float: left;
+  width: 40px;
+  text-align: center;
+  color: #fff;
+  background: #77b6ed;
+}
+
+.deepEye_face_videoTime_time {
+  display: inline-block;
+  width: 58px;
+  text-align: center;
+  color: #80868e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deepEye_face_monitor_time {
+  display: inline-block;
+  width: 58px;
+  text-align: center;
+  color: #80868e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deepEye_face_monitor_text {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  color: #fff;
+  background: #77b6ed;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deepEye_deleteAnimationWrap {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: rgba(225, 225, 225, 0.5);
+  cursor: pointer;
+}
+
+.video_faceitem_wrap .deepEye_deleteAnimationWrap {
+  left: 0px;
+}
+
+.deepEye_deleteAnimation {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.deepEye_revoke {
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+
+/* 摄像头组件样式 end */
+
+/* 一级菜单样式 start */
+
+.deepEye_menuItem_title {
+  width: 100%;
+  height: 42px;
+  padding: 7px 7px 7px 16px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.deepEye_menuItem_title:hover {
+  background-color: #245483;
+}
+
+.deepEye_menuItem_title.bg {
+  background-color: #1188ee;
+}
+
+.deepEye_menuItem_searchIcon {
+  display: none;
+  width: 24px;
+  height: 28px;
+  vertical-align: top;
+  background: url('../asset/icon/search_white.png') center no-repeat;
+  cursor: pointer;
+}
+
+.deepEye_menuItem_searchIcon.active {
+  background: url('../asset/icon/back.png') center no-repeat;
+}
+
+.deepEye_menuItem_title.active .deepEye_menuItem_searchIcon {
+  display: inline-block;
+}
+
+.deepEye_menuItem_Wrap {
+  display: inline-block;
+  width: 242px;
+  height: 28px;
+  vertical-align: top;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.deepEye_menuItem_content {
+  width: 560px;
+  transition: margin-left 0.5s;
+}
+
+.deepEye_menuItem_content.active {
+  margin-left: -261px;
+  transition: margin-left 0.5s;
+}
+
+.deepEye_menuItem_content::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+  margin-right: 12px;
+  /* transition: transform 0.5s; */
+}
+
+/* .deepEye_menuItem_content-1::before {
+  background: url('../asset/menu/collectionSysMenu/collectionMenu1.png') center
+    no-repeat;
+}
+
+.deepEye_menuItem_content-2::before {
+  height: 20px;
+  background: url('../asset/menu/collectionSysMenu/collectionMenu2.png') center
+    no-repeat;
+}
+
+.deepEye_menuItem_content-3::before {
+  background: url('../asset/menu/collectionSysMenu/collectionMenu3.png') center
+    no-repeat;
+}
+
+.deepEye_menuItem_content-4::before {
+  top: 2px;
+  background: url('../asset/menu/collectionSysMenu/collectionMenu4.png') center
+    no-repeat;
+} */
+
+/* .deepEye_menuItem_title.active .deepEye_menuItem_content::before {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+} */
+
+.deepEye_menuItem_arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  background: url('../asset/icon/right_arrow.png') center no-repeat;
+}
+
+.deepEye_menuItem_text {
+  display: inline-block;
+  width: 230px;
+}
+
+.deepEye_menu_count {
+  opacity: 0.5;
+}
+
+.deepEye_menuItem_searchInput {
+  display: inline-block;
+  width: 240px;
+  height: 28px;
+  line-height: 28px;
+}
+
+/* 一级菜单样式 end */
+
+/* 二级菜单样式 start */
+
+.deepEye_submenu {
+  display: none;
+  position: relative;
+  /* max-height: 350px; */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.deepEye_submenu.active {
+  display: block;
+}
+
+.deepEye_submenuItem_title {
+  width: 100%;
+  height: 32px;
+  padding: 6px 7px 6px 16px;
+  line-height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.deepEye_submenuItem_content {
+  width: 100%;
+}
+
+.deepEye_submenuItem_content::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background: url('../asset/icon/right.png') center no-repeat;
+  transition: transform 0.5s;
+}
+
+.deepEye_submenuItem_title:hover {
+  background-color: #245483;
+}
+
+.deepEye_submenuItem_title.bg {
+  background-color: #1188ee;
+}
+
+.deepEye_submenuItem_title.active .deepEye_submenuItem_content::before {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+
+.deepEye_submenuItem_contentNoIcon {
+  width: 100%;
+}
+
+.deepEye_submenuItem_contentNoIcon::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+}
+
+/* 二级菜单样式 end */
+
+/* 三级菜单样式 start */
+
+.deepEye_thirdmenu {
+  display: none;
+  background: #192a43;
+}
+
+.deepEye_thirdmenu.active {
+  display: block;
+}
+
+.deepEye_thirdmenuItem_title {
+  width: 100%;
+  height: 26px;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 5px 7px 5px 57px;
+  cursor: pointer;
+}
+
+.deepEye_thirdmenuItem_title:hover {
+  background-color: #245483;
+}
+
+.deepEye_thirdmenuItem_title.bg {
+  background-color: #1188ee;
+}
+
+.deepEye_thirdmenuItem_text {
+  font-size: 14px;
+}
+
+/* 三级菜单样式 end */
+
+/* 视频详情列表 start */
+
+.deepEye_viewList {
+  padding: 14px 30px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  clear: both;
+}
+
+/* 视频详情列表 end */
+
+/* 分页样式 */
+
+.deepEye_pagination {
+  display: table;
+  margin: 10px auto;
+}
+
+/* 弹窗提示样式 */
+
+.vertical-center-modal {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.vertical-center-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.vertical-center-modal .ant-modal {
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
+  text-align: left;
+}
+
+/* 事件流时间线 start */
+
+.timelineevent-wrap {
+  padding: 20px 20px;
+}
+
+.timelineevent-wrap .face_wrap {
+  padding: 5px 0px;
+}
+
+.timelineevent-wrap .hour {
+  padding-left: 18px;
+}
+
+.deepEye_timeLine {
+  padding-left: 60px;
+}
+
+.deepEye_timeLine .ant-timeline-item {
+  padding-left: 60px;
+}
+
+.deepEye_timeLine .ant-timeline-item-tail {
+  left: 65px;
+  border-left: 1px solid #e9e9e9;
+}
+
+.deepEye_timeLine .left_content {
+  position: absolute;
+  left: 0px;
+}
+
+.deepEye_timeLine .right_content {
+  position: absolute;
+  left: 70px;
+  top: -7px;
+}
+
+.deepEye_timeLine .ant-timeline-item-first {
+  border-left: 0px;
+}
+
+/* 事件流时间线 end */
+
+/* 相似度滑条 start */
+#content_filter_slider {
+  width: 310px;
+  position: absolute;
+  left: 650px;
+  top: 18px;
+}
+@media screen and (max-width: 1540px) {
+  #content_filter_slider {
+    position: initial;
+    left: 0px;
+    top: 0px;
+    width: 500px;
+    margin-top: 14px;
+  }
+}
+
+#content_filter_slider .content_slider_title {
+  line-height: 32px;
+}
+
+/* 相似度滑条 end */
+
+.deepEye-marks {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* 布控系统告警标志  start*/
+
+.marks-precise {
+  /* 暂时隐藏精准告警 */
+  /* background: url('../asset/icon/monitor/icon_Precise.png') center no-repeat; */
+}
+
+.marks-white {
+  background: url('../asset/icon/monitor/icon_White.png') center no-repeat;
+}
+
+.marks-time {
+  background: url('../asset/icon/monitor/icon_Time.png') center no-repeat;
+}
+
+.marks-right {
+  background: url('../asset/icon/monitor/icon_Right.png') center no-repeat;
+}
+
+.marks-focus {
+  display: inline-block;
+  padding-left: 14px;
+  line-height: 14px;
+  vertical-align: middle;
+  background: url('../asset/icon/monitor/following.png') 0px center no-repeat;
+}
+
+.marks-focus.active {
+  background: url('../asset/icon/monitor/followed.png') 0px center no-repeat;
+  color: #77b6ed;
+}
+
+/* 布控系统告警标志  end*/
+
+.filter-expand {
+  cursor: pointer;
+  position: absolute;
+  background: url('../asset/icon/expand.png') center center no-repeat;
+  width: 14px;
+  height: 16px;
+  left: 50%;
+  background-color: #fff;
+  bottom: -8px;
+  /* border: 1px solid #ccc; */
+  border-top: 0px;
+}
+
+.filter-rollup {
+  cursor: pointer;
+  position: absolute;
+  background: url('../asset/icon/rollup.png') center center no-repeat;
+  width: 14px;
+  height: 16px;
+  left: 50%;
+  background-color: #fff;
+  bottom: -9px;
+  /* border: 1px solid #ccc; */
+  /* border-bottom: 0px; */
+}
+
+/* tab切换 */
+
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content {
+  height: calc(100% - 50px);
+}
+
+.eventTimeLine__mapShowOnOff {
+  z-index: 1;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  text-indent: 20px;
+  cursor: pointer;
+  background: url(../asset/icon/location.png) no-repeat 0 center;
+}
+
+/* 省略显示点点点 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 人员详情详情 start */
+
+.deepEye_personDetail {
+  width: 530px;
+  height: 100%;
+  border-left: 1px solid #dbdbdb;
+  position: relative;
+  font-size: 14px;
+}
+#searchSystem_content .deepEye_personDetail {
+  height: calc(100% - 60px);
+}
+.deepEye_personDetail_title {
+  height: 50px;
+  line-height: 30px;
+  text-align: center;
+  padding: 10px 44px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.deepEye_personDetail_infoWrap {
+  height: calc(100% - 50px);
+  padding: 40px 44px 10px 44px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.deepEye_personDetail_pics {
+}
+
+.deepEye_personDetail_bigPicWrap {
+  width: 190px;
+  height: 190px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.deepEye_personDetail_bigPic {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 190px;
+  text-align: center;
+  cursor: pointer;
+  background: #e1e1e1;
+  color: #fff;
+}
+
+.deepEye_personDetail_smallPics {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.deepEye_personDetail_smallPicItem {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.deepEye_personDetail_smallPic {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+  text-align: center;
+  cursor: pointer;
+  background: #e1e1e1;
+  color: #fff;
+}
+
+.deepEye_personDetail_info {
+  margin-top: 40px;
+}
+
+.deepEye_personDetail_info_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #f0f2f6;
+}
+
+.deepEye_personDetail_group {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+}
+
+.deepEye_personDetail_group_title {
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.deepEye_personDetail_group_text {
+  display: inline-block;
+  width: calc(100% - 80px);
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+/* 人员详情 end */
